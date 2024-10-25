@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5968751698383977357}
   - component: {fileID: 7150719544482292167}
   - component: {fileID: 6431858219365316495}
+  - component: {fileID: 1937253171126176444}
   m_Layer: 0
   m_Name: Samara
   m_TagString: Untagged
@@ -97,4 +98,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a086777a56af5db98d4c55af62f6916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  walkSpeed: 5
+  runSpeed: 10
+  stamina: 100
+  maxStamina: 100
+  staminaDrainRate: 10
+  staminaRegenRate: 5
+--- !u!114 &1937253171126176444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697787085777088771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fef267f4db8e946a4cb4a00c6f7f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,8 +8,8 @@ namespace Player {
     {
         [SerializeField] private float walkSpeed = 5f;
         [SerializeField] private float runSpeed = 10f;
-        [SerializeField] private float stamina = 100f;
-        [SerializeField] private float maxStamina = 100f;
+        [SerializeField] public float stamina = 100f;
+        [SerializeField] public float maxStamina = 100f;
         [SerializeField] private float staminaDrainRate = 10f; // Ilość staminy zużywana na sekundę podczas biegu
         [SerializeField] private float staminaRegenRate = 5f; // Ilość staminy regenerowana na sekundę
 
