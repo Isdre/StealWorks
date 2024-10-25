@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  canMove: 1
   run: 0
 --- !u!58 &1510724513084674524
 CircleCollider2D:

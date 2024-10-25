@@ -10,8 +10,9 @@ namespace Kids {
         private Transform _transform;
         private Rigidbody2D _rigid;
 
+        public bool canMove = true;
         [SerializeField] private bool run;
-        
+
         private void Start() {
             _player = GameObject.FindWithTag("Player").transform;
             _transform = transform;
@@ -19,7 +20,7 @@ namespace Kids {
         }
 
         private void Update() {
-            if (run) {
+            if (canMove & run) {
                 Vector3 direction = (_transform.position - _player.position).normalized;
                 _rigid.velocity = speed * Time.deltaTime * direction;
             } else _rigid.velocity = Vector3.zero;
