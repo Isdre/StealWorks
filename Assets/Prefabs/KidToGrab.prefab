@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 166778354995374635}
   - component: {fileID: 4622437174760181540}
   m_Layer: 0
-  m_Name: Kid
+  m_Name: KidToGrab
   m_TagString: Kid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
