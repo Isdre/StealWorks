@@ -19,6 +19,8 @@ namespace Kids {
             _rigid = GetComponent<Rigidbody2D>();
         }
 
+        public void UnlockMove() {canMove = true;}
+
         private void Update() {
             if (canMove & run) {
                 Vector3 direction = (_transform.position - _player.position).normalized;
