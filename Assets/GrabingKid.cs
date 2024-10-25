@@ -16,17 +16,34 @@ namespace Player {
         public Image uiImageSlot2;
         public bool canGrab = false;
         public GameObject currentChild;
+        public bool canRealeseChild = false;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            canGrab = true;
-            currentChild = other.gameObject;
+            if (other.CompareTag("Kid"))
+            {
+                canGrab = true;
+                currentChild = other.gameObject;
+            }
+            if (other.CompareTag("MeatGrinder"))
+            {
+               canRealeseChild = true;
+               
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            canGrab = false;
-            currentChild = null;
+            if (other.CompareTag("Kid"))
+            {
+                canGrab = false;
+                currentChild = null;
+            }
+            if (other.CompareTag("MeatGrinder"))
+            {
+              canRealeseChild = false;
+            }
+        
         }
 
         private void Update()
@@ -58,6 +75,26 @@ namespace Player {
                     }
                 }
             }
+
+            if (canRealeseChild)
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    ReleaseKids();
+                }
+            }
+        }
+
+        public void ReleaseKids()
+        {
+            // Czyszczenie ikonek z UI
+            uiImageSlot1.sprite = null;
+            uiImageSlot2.sprite = null;
+
+            // Opróżnia listę dzieci
+            collectedKids.Clear();
+        
+            Debug.Log("Dzieci zostały opuszczone.");
         }
     }
 }
