@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1af81c3acdc9546939ac8f26baa482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 1948170796}
-  staminaSlider: {fileID: 254444505}
+  healthSlider: {fileID: 254444505}
+  staminaSlider: {fileID: 1948170796}
   playerMovement: {fileID: 1977324749}
   playerStats: {fileID: 1977324750}
 --- !u!114 &528918302
@@ -1341,11 +1341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6431858219365316495, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
       propertyPath: stamina
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6431858219365316495, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
       propertyPath: maxStamina
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8697787085777088771, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
       propertyPath: m_Name

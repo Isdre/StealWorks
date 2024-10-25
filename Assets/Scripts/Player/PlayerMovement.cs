@@ -14,7 +14,7 @@ namespace Player {
         [SerializeField] private float staminaRegenRate = 5f; // Ilość staminy regenerowana na sekundę
 
         private Transform _transform;
-        private bool isRunning = false;
+        public bool isRunning = false;
 
         private void Start()
         {
@@ -31,27 +31,34 @@ namespace Player {
                 isRunning = true;
                 stamina -= staminaDrainRate * Time.deltaTime; // Zużycie staminy
             }
-            
+            else if (Input.GetKeyUp(KeyCode.Space))
             {
-                isRunning = false;
+               isRunning = false;
 
             }
 
-            if (isRunning!)
+            if (isRunning==false)
             {
-                // Regeneracja staminy, jeśli nie biegamy
-                if (stamina < maxStamina)
-                {
-                    stamina += staminaRegenRate * Time.deltaTime;
-                    stamina = Mathf.Clamp(stamina, 0, maxStamina); // Zapewniamy, że stamina nie przekroczy maxStamina
-
-                }
+             staminaDrain();
+               
             }
 
             // Ustaw prędkość zależnie od tego, czy gracz biegnie
                 float currentSpeed = isRunning ? runSpeed : walkSpeed;
                 _transform.position += direction * currentSpeed * Time.deltaTime;
             
+        }
+
+
+        void staminaDrain()
+        {
+            if (stamina < maxStamina)
+            { 
+                Debug.Log("Stamina: "+stamina+"MaxStamina: "+maxStamina);
+                stamina += staminaRegenRate*Time.deltaTime;
+
+
+            }
         }
     }
 }
