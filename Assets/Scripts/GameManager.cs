@@ -24,4 +24,9 @@ public class GameManager : MonoBehaviour {
         _gold -= howMuch;
         return true;
     }
+
+    //<3
+    public bool NegateBool(bool variable) {
+        return !variable;
+    }
 }
