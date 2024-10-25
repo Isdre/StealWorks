@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Kids;
+using Teacher;
 
 namespace Traps {
-    public abstract class StunTrap : Trap
+    public class StunTrap : Trap
     {
         public int TTL = 1;
 
-        public virtual void OnChildEnter(GameObject target) {
+        public override void OnChildEnter(GameObject target) {
             TTL--;
             Debug.Log("Child");
+            target.GetComponent<KidMovement>().canMove = false;
             if (TTL == 0) Destroy(this.gameObject);
         }
 
-        public virtual void OnKindergartenerEnter(GameObject target) {
+        public override void OnKindergartenerEnter(GameObject target) {
             TTL--;
-            Debug.Log("Kindergartener");
+            target.GetComponent<TeacherMovement>().canMove = false;
             if (TTL == 0) Destroy(this.gameObject);
         }
 
