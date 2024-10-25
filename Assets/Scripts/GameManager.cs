@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public int GetGold() {return _gold;}
+
     public void AddGold(int gold) {
         _gold += gold;
     }
