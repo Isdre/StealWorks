@@ -23,10 +23,6 @@ namespace Shop{
             else Time.timeScale = 1f;
         }
 
-        public void BuyItem(int itemId, int gold) {
-            
-        }
-
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) SetIcon(true);
         }

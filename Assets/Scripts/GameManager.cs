@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct ItemCount {
+    int id;
+    int count;
+}
+
 public class GameManager : MonoBehaviour {
+
     public static GameManager Instance = null;
+    public List<ItemCount> Inventory = new();
     private int _gold = 0;
 
 
