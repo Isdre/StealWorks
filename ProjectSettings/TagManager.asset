@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Child
   - Kindergartener
+  - Kid
   layers:
   - Default
   - TransparentFX

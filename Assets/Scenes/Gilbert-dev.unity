@@ -1408,6 +1408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Samara
       objectReference: {fileID: 0}
+    - target: {fileID: 8697787085777088771, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
