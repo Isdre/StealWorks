@@ -16,7 +16,7 @@ namespace Traps {
             if (TTL == 0) Destroy(this.gameObject);
         }
 
-        public override void OnKindergartenerEnter(GameObject target) {
+        public void OnKindergartenerEnter(GameObject target) {
             TTL--;
             target.GetComponent<TeacherMovement>().canMove = false;
             if (TTL == 0) Destroy(this.gameObject);
@@ -24,7 +24,7 @@ namespace Traps {
 
 
         private void OnTriggerEnter2D(Collider2D col) {
-            if (col.gameObject.CompareTag("Child")) OnChildEnter(col.gameObject);
+            if (col.gameObject.CompareTag("Kid")) OnChildEnter(col.gameObject);
             if (col.gameObject.CompareTag("Kindergartener")) OnKindergartenerEnter(col.gameObject);
         }
     }

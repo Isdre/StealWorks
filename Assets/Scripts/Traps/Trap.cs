@@ -9,7 +9,7 @@ namespace Traps {
 
         public virtual void OnChildEnter(GameObject target) {
             TTL--;
-            Debug.Log("Child");
+            Debug.Log("Kid");
             if (TTL == 0) Destroy(this.gameObject);
         }
 
@@ -17,12 +17,6 @@ namespace Traps {
             TTL--;
             Debug.Log("Kindergartener");
             if (TTL == 0) Destroy(this.gameObject);
-        }
-
-
-        private void OnTriggerEnter2D(Collider2D col) {
-            if (col.gameObject.CompareTag("Child")) OnChildEnter(col.gameObject);
-            if (col.gameObject.CompareTag("Kindergartener")) OnKindergartenerEnter(col.gameObject);
         }
     }
 }
