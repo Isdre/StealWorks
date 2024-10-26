@@ -29,6 +29,12 @@ namespace Kids {
         }
 
         public void UnlockMove() {canMove = true;}
+        public void LockMove() {
+            Debug.Log("LockMove");
+            canMove = false;
+            _rigid.velocity = Vector3.zero;
+        }
+
 
         private void Update() {
             if (canMove) {

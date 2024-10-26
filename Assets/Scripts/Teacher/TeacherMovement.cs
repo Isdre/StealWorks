@@ -39,6 +39,11 @@ namespace Teacher {
         }
 
         public void UnlockMove() {canMove = true;}
+        public void LockMove() {
+            Debug.Log("LockMove");
+            canMove = false;
+            _rigid.velocity = Vector3.zero;
+        }
 
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) {
