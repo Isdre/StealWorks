@@ -5,12 +5,14 @@ using TMPro;
 
 namespace Shop{
     public class Item : MonoBehaviour {
-        public int itemId;
+        public string name;
+        [SerializeField] private TextMeshProUGUI textName;
         public int gold;
-        [SerializeField] private TextMeshProUGUI text;
+        [SerializeField] private TextMeshProUGUI textGold;
 
         private void Start() {
-            text.text = gold.ToString();
+            textGold.text = gold.ToString();
+            textName.text = name;
         }
 
         public void BuyItem() {
