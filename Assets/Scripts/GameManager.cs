@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Traps;
 
 [System.Serializable]
 public struct ItemCount {
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour {
         }
         else i = new ItemCount(item,1);
         Inventory.Add(i);
+        TrapBelt.Instance.AddTrap(item);
     }
 
     public void RemoveItem(string item)

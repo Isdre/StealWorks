@@ -12,6 +12,8 @@ namespace Kids {
 
         public bool canMove = true;
         [SerializeField] private bool run;
+        [SerializeField] private bool runToTarget;
+        private Vector3 _target;
 
         private void Start() {
             _player = GameObject.FindWithTag("Player").transform;
@@ -22,10 +24,25 @@ namespace Kids {
         public void UnlockMove() {canMove = true;}
 
         private void Update() {
-            if (canMove & run) {
-                Vector3 direction = (_transform.position - _player.position).normalized;
-                _rigid.velocity = speed * Time.deltaTime * direction;
-            } else _rigid.velocity = Vector3.zero;
+            Vector3 direction = Vector3.zero;
+            if (canMove) {
+                if (run) {
+                    direction = (_transform.position - _player.position).normalized;
+                } else if (runToTarget) {
+                    direction = (_target - _transform.position).normalized;
+                }
+            }
+
+            _rigid.velocity = speed * Time.deltaTime * direction;
+        }
+
+        public void RunToTarget(Vector3 target) {
+            _target = target;
+            runToTarget = true;
+        }
+
+        public void StopRunToTarget() {
+            runToTarget = false;
         }
 
         private void OnTriggerEnter2D(Collider2D col) {
