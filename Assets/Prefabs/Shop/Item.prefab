@@ -305,6 +305,7 @@ MonoBehaviour:
   textName: {fileID: 2993891294638653723}
   gold: 0
   textGold: {fileID: 5506789070512534086}
+  image: {fileID: 5514472665263716835}
 --- !u!114 &8772102445406126719
 MonoBehaviour:
   m_ObjectHideFlags: 0
