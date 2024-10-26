@@ -20,7 +20,6 @@ public class TrapBelt : MonoBehaviour
     public List<int> trapCount;
     public List<TrapSlot> slots = new();
     [SerializeField] private GameObject trapSlot;
-    private int selectedTrap = 0;
 
     private void Awake() {
         if (Instance == null) Instance = this;

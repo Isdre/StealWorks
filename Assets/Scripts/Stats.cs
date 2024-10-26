@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
-namespace  Player
+namespace Player
 {
     public class Stats : MonoBehaviour
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Kids {
     public class KidMovement : MonoBehaviour
@@ -14,26 +15,37 @@ namespace Kids {
         [SerializeField] private bool run;
         [SerializeField] private bool runToTarget;
         private Vector3 _target;
+        private System.Random _rand;
+        private Vector3 _direction;
+        private float timeD = 3f;
+        private float timerD;
 
         private void Start() {
+            timerD = timeD;
             _player = GameObject.FindWithTag("Player").transform;
             _transform = transform;
             _rigid = GetComponent<Rigidbody2D>();
+            _rand = new System.Random();
         }
 
         public void UnlockMove() {canMove = true;}
 
         private void Update() {
-            Vector3 direction = Vector3.zero;
             if (canMove) {
                 if (run) {
-                    direction = (_transform.position - _player.position).normalized;
+                    _direction = (_transform.position - _player.position);
                 } else if (runToTarget) {
-                    direction = (_target - _transform.position).normalized;
+                    _direction = (_target - _transform.position);
                 }
-            }
 
-            _rigid.velocity = speed * Time.deltaTime * direction;
+                timerD -= Time.deltaTime;
+                if (timerD < 0f) {
+                    _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+                    timerD = timeD;
+                }
+
+                _rigid.velocity = speed * Time.deltaTime * _direction.normalized;
+            }
         }
 
         public void RunToTarget(Vector3 target) {
@@ -43,6 +55,7 @@ namespace Kids {
 
         public void StopRunToTarget() {
             runToTarget = false;
+            _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
         }
 
         private void OnTriggerEnter2D(Collider2D col) {
@@ -54,6 +67,7 @@ namespace Kids {
         private void OnTriggerExit2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) {
                 run = false;
+                _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
             }
         }
     }
