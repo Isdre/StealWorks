@@ -5,18 +5,19 @@ using TMPro;
 
 namespace Shop{
     public class Item : MonoBehaviour {
-        public string name;
+        public string Name;
         [SerializeField] private TextMeshProUGUI textName;
         public int gold;
         [SerializeField] private TextMeshProUGUI textGold;
 
         private void Start() {
             textGold.text = gold.ToString();
-            textName.text = name;
+            textName.text = Name;
         }
 
         public void BuyItem() {
-
+            if (GameManager.Instance.TakeGold(gold))
+                GameManager.Instance.AddItem(Name);
         }
     }
 }
