@@ -7,7 +7,7 @@ using Teacher;
 namespace Traps {
     public class StunTrap : Trap
     {
-        public int TTL = 1;
+        public int TTL = 2;
         public float stunTime = 3f;
 
         public override void OnChildEnter(GameObject target) {
