@@ -26,6 +26,8 @@ namespace Teacher {
             } else _rigid.velocity = Vector3.zero;
         }
 
+        public void UnlockMove() {canMove = true;}
+
         private void OnTriggerEnter2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) {
                 run = true;

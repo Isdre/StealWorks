@@ -5,7 +5,7 @@ using Kids;
 using Teacher;
 
 namespace Traps {
-    public class StunTrap : Trap
+    public class BaitTrap : Trap
     {
         public int TTL = 1;
         public float stunTime = 3f;
@@ -25,6 +25,10 @@ namespace Traps {
             km.canMove = false;
             km.Invoke("UnlockMove", stunTime);
             if (TTL == 0) Destroy(this.gameObject);
+        }
+
+        private void OnCollisionEnter2D(Collision2D col) {
+            
         }
 
         private void OnTriggerEnter2D(Collider2D col) {
