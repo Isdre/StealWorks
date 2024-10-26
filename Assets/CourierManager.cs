@@ -8,10 +8,11 @@ public class CourierManager : MonoBehaviour
 {
     private bool isCourierActive = false;
     
+    public RecipePanel recipePanel;
     public Image order;
-    public Order[] orders ;
-    public Image[] ordersImages;
-    private int currentOrderIndex = 0;
+    public RecipePanel.Recipe[] allRecipes;
+    public Transform ordersContainer;
+   
     public TMP_Text timer;
     
     public float timeLimit = 300f; // 5 minut w sekundach
@@ -20,15 +21,36 @@ public class CourierManager : MonoBehaviour
     public Color warningColor = Color.red;        // Kolor ostrzegawczy
     public Vector3 normalScale = Vector3.one;     // Normalny rozmiar tekstu
     public Vector3 pulseScale = Vector3.one * 1.5f;
+    
+    public int numberOfOrders = 3;
+    
+    
+    
+    private int currentOrderIndex = 0;
+    private List<RecipePanel.Recipe> orders;      
+    private List<Image> ordersImages;  
     private int helper = 0;
     
     void Start()
     {
+        allRecipes = recipePanel.recipes;
+        orders = new List<RecipePanel.Recipe>();  // Inicjalizacja listy zamówień
+        ordersImages = new List<Image>();         // Inicjalizacja listy obrazków
+        RandomizeOrders();    
         // Rozpocznij proces
         StartCoroutine(SpawnCourier());
         
     }
-
+    private void RandomizeOrders()
+    {
+        // Losowanie przepisów z listy wszystkich dostępnych przepisów
+        List<RecipePanel.Recipe> shuffledRecipes = new List<RecipePanel.Recipe>(allRecipes);
+        shuffledRecipes.Shuffle(); // Wykonaj losowanie (dodamy metodę rozszerzającą poniżej)
+        
+        // Pobierz tylko pierwsze kilka przepisów, np. 10, lub do maksymalnej liczby przepisów
+        int orderCount = Mathf.Min(shuffledRecipes.Count, numberOfOrders);
+        orders = shuffledRecipes.GetRange(0, orderCount);
+    }
     private IEnumerator SpawnCourier()
     {
         yield return new WaitForSeconds(1f); // Czas oczekiwania przed pojawieniem się kuriera
@@ -41,10 +63,21 @@ public class CourierManager : MonoBehaviour
 
     private void ShowOrder()
     {
-        order.gameObject.SetActive(true);
-        for (int i = 0; i < orders.Length; i++)
+       
+        // Usuń stare obrazki składników
+        foreach (Image img in ordersImages)
         {
-            ordersImages[i].sprite = orders[i].icon;
+            Destroy(img.gameObject);
+        }
+        ordersImages.Clear();
+       
+        // Dodaj nowe obrazki składników dla aktualnego przepisu
+        foreach (var ingredient in  orders)
+        {
+            Image newImage = new GameObject("OrderImage", typeof(Image)).GetComponent<Image>();
+            newImage.sprite = ingredient.image; // ustaw sprite dla składnika
+            newImage.transform.SetParent(ordersContainer, false); // przypnij do kontenera z layoutem
+            ordersImages.Add(newImage);
         }
     }
 
@@ -108,13 +141,13 @@ public class CourierManager : MonoBehaviour
 
     public void DeliverOrder()
     {
-        if (isCourierActive && currentOrderIndex < orders.Length)
+        if (isCourierActive && currentOrderIndex < orders.Count)
         {
            
             currentOrderIndex++;
             ShowOrder();
 
-            if (currentOrderIndex >= orders.Length)
+            if (currentOrderIndex >= orders.Count)
             {
                 EndCourierSession();
             }
@@ -125,5 +158,22 @@ public class CourierManager : MonoBehaviour
     {
         isCourierActive = false;
         // Możesz dodać więcej logiki tutaj, np. wywołać inne metody, wyświetlić wyniki itp.
+    }
+}
+public static class ListExtensions
+{
+    private static System.Random rng = new System.Random();
+
+    public static void Shuffle<T>(this IList<T> list)
+    {
+        int n = list.Count;
+        while (n > 1) 
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
     }
 }
