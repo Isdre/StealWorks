@@ -79,9 +79,9 @@ public class IngredientScroller : MonoBehaviour
     private void OnIngredientClick(int index)
     {
         string ingredientName = GetIngredientName(index); // Uzyskanie nazwy składnika na podstawie indeksu
-        
-        inventory.RemoveItem(ingredientName)
-        
+
+        inventory.RemoveItem(ingredientName);
+
     }
 
     public void ScrollLeft()
