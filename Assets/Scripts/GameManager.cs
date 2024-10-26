@@ -52,6 +52,14 @@ public class GameManager : MonoBehaviour {
         Inventory.Add(i);
     }
 
+    public void RemoveItem(string item)
+    {
+        ItemCount i = Inventory.Where(x => x.name == item).FirstOrDefault();
+        Inventory.RemoveAll(x => x.name == item);
+        i.count--;
+        Inventory.Add(i);
+    }
+
     //<3
     public bool NegateBool(bool variable) {
         return !variable;

@@ -14,11 +14,13 @@ public class IngredientScroller : MonoBehaviour
     public Button leftButton;
     public Button rightButton;
 
+    private GameManager inventory; 
     private int startIndex = 0;
     private int visibleCount = 6; // Liczba widocznych składników
 
     void Start()
     {
+        inventory = FindObjectOfType<GameManager>();
         UpdateIngredientDisplay();
         
         // Listener do przycisków przewijania
@@ -48,12 +50,38 @@ public class IngredientScroller : MonoBehaviour
             newIngredientButton.GetComponent<Button>().onClick.AddListener(() => OnIngredientClick(ingredientIndex));
         }
     }
+    private string GetIngredientName(int index)
+    {
+        switch (index)
+        {
+            case 0: return "Bulka";
+            case 1: return "Kotlet";
+            case 2: return "Bekon";
+            case 3: return "Szarpane";
+            case 4: return "Grill";
+            case 5: return "Salami";
+            case 6: return "Chorizo";
+            case 7: return "Kielbasa";
+            case 8: return "Pastrami";
+            case 9: return "Plastry";
+            case 10: return "Cheddar";
+            case 11: return "Salata";
+            case 12: return "Pomidor";
+            case 13: return "Ogorek";
+            case 14: return "Cebula";
+            case 15: return "Ketchup";
+            case 16: return "Majonezowy";
+            default: return "Unknown";
+        }
+    }
 
     // Metoda dla obsługi kliknięcia w przycisk składnika
     private void OnIngredientClick(int index)
     {
-        Debug.Log("Kliknięto składnik: " + index);
-        // Tutaj możesz dodać logikę interakcji ze składnikiem, np. wybór składnika, dodanie go do przepisu itd.
+        string ingredientName = GetIngredientName(index); // Uzyskanie nazwy składnika na podstawie indeksu
+        
+        inventory.RemoveItem(ingredientName)
+        
     }
 
     public void ScrollLeft()
