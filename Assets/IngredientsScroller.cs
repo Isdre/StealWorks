@@ -81,7 +81,7 @@ public class IngredientScroller : MonoBehaviour
         string ingredientName = GetIngredientName(index); // Uzyskanie nazwy składnika na podstawie indeksu
 
        
-        burgerBuilder.AddIngredient(index);
+        burgerBuilder.AddIngredient(index,ingredientName);
  //inventory.RemoveItem(ingredientName);
     }
 

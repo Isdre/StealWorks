@@ -9,7 +9,6 @@ public class CourierManager : MonoBehaviour
     private bool isCourierActive = false;
     
     public RecipePanel recipePanel;
-    public Image order;
     public RecipePanel.Recipe[] allRecipes;
     public Transform ordersContainer;
    

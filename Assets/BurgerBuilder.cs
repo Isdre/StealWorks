@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,18 @@ public class BurgerBuilder : MonoBehaviour
     public GameObject ingredientPrefab;     // Prefab UI `Image` składnika
     public IngredientScroller ingredientScroller;
     
-    private List<GameObject> currentIngredients = new List<GameObject>();
+    public List<GameObject> currentIngredients = new List<GameObject>();
+    public List<String> currentBurger = new List<String>();
     private float offsetY = 15f;  // Odległość w pionie między składnikami
+    
+    
+    public Button acceptButton;
+    public Button throwButton;
 
     private void Start()
     {
+        acceptButton.onClick.AddListener(SellBurger);
+        throwButton.onClick.AddListener(ThrowBurger);
         ingredientSprites = ingredientScroller.ingredients;
         if (burgerContainer == null)
         {
@@ -22,7 +30,7 @@ public class BurgerBuilder : MonoBehaviour
         }
     }
 
-    public void AddIngredient(int ingredientIndex)
+    public void AddIngredient(int ingredientIndex, string name)
     {
         if (ingredientIndex >= 0 && ingredientIndex < ingredientSprites.Count)
         {
@@ -36,6 +44,7 @@ public class BurgerBuilder : MonoBehaviour
 
             // Dodawanie składnika do listy
             currentIngredients.Add(newIngredient);
+            currentBurger.Add(name);
         }
     }
 
@@ -46,5 +55,18 @@ public class BurgerBuilder : MonoBehaviour
             Destroy(ingredient);
         }
         currentIngredients.Clear();
+        currentBurger.Clear();
+    }
+
+    public void ThrowBurger()
+    {
+        ResetBurger();
+        
+    }
+
+    public void SellBurger()
+    {
+        ResetBurger();
+        //TO DO GDZIEŚ PRZEKAZAĆ INFO O LIŚCIE NAMÓW
     }
 }
