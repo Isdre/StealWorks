@@ -30,8 +30,8 @@ namespace Teacher {
 
         private void Shot(Vector3 d) {
             for(int i=0;i<bulletPerShot;i++) {
-                d += new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f) * 0.2f;
-                TeacherBullet b = Instantiate(bullet,transform.position, Quaternion.identity).GetComponent<TeacherBullet>();
+                d += new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f) * 0.3f;
+                TeacherBullet b = Instantiate(bullet,transform.position+d, Quaternion.identity).GetComponent<TeacherBullet>();
                 b.Direction = d.normalized;
             }
             reloadTimer = reloadTime;

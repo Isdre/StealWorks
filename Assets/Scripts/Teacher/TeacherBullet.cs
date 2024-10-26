@@ -28,6 +28,11 @@ namespace Teacher {
                 col.gameObject.GetComponent<Stats>().currentHealth -= Damage;
                 Destroy(this.gameObject);
             }
+
+            if (col.gameObject.CompareTag("Kid")) {
+                Destroy(col.gameObject);
+                Destroy(this.gameObject);
+            }
         }
     }
 }
