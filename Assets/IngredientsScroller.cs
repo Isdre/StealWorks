@@ -13,7 +13,7 @@ public class IngredientScroller : MonoBehaviour
     public Transform container; // Kontener (Panel) na składniki
     public Button leftButton;
     public Button rightButton;
-
+    public BurgerBuilder burgerBuilder;
     private GameManager inventory; 
     private int startIndex = 0;
     private int visibleCount = 6; // Liczba widocznych składników
@@ -80,8 +80,9 @@ public class IngredientScroller : MonoBehaviour
     {
         string ingredientName = GetIngredientName(index); // Uzyskanie nazwy składnika na podstawie indeksu
 
-        inventory.RemoveItem(ingredientName);
-
+       
+        burgerBuilder.AddIngredient(index,ingredientName);
+ //inventory.RemoveItem(ingredientName);
     }
 
     public void ScrollLeft()
