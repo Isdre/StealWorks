@@ -18,7 +18,6 @@ public class CourierManager : MonoBehaviour
     private float timeRemaining;
     public Color normalColor = Color.white;       // Normalny kolor tekstu
     public Color warningColor = Color.red;        // Kolor ostrzegawczy
-    public float pulseSpeed = 2f;
     public Vector3 normalScale = Vector3.one;     // Normalny rozmiar tekstu
     public Vector3 pulseScale = Vector3.one * 1.5f;
     private int helper = 0;
