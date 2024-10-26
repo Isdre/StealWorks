@@ -7,12 +7,11 @@ using Teacher;
 namespace Traps {
     public class StunTrap : Trap
     {
-        public int TTL = 2;
+        public int TTL = 4;
         public float stunTime = 3f;
 
         public override void OnChildEnter(GameObject target) {
             TTL--;
-            Debug.Log("Child");
             KidMovement km = target.GetComponent<KidMovement>();
             km.canMove = false;
             km.Invoke("UnlockMove", stunTime);
