@@ -2545,7 +2545,6 @@ GameObject:
   - component: {fileID: 8494980933932965749}
   - component: {fileID: 8705415943143403787}
   - component: {fileID: 415652793643918393}
-  - component: {fileID: 5480954767431522675}
   - component: {fileID: 9149663317114025301}
   m_Layer: 5
   m_Name: Glovoman
@@ -2611,29 +2610,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5480954767431522675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828702901235276987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60ccb134902277c4ab6e8e3a9e3f7cb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipePanel: {fileID: 2587377857212917302}
-  allRecipes: []
-  ordersContainer: {fileID: 659019063320632321}
-  timer: {fileID: 4151673127110869276}
-  timeLimit: 300
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  warningColor: {r: 1, g: 0, b: 0, a: 1}
-  normalScale: {x: 1, y: 1, z: 1}
-  pulseScale: {x: 1.5, y: 1.5, z: 1.5}
-  numberOfOrders: 3
-  orderPrefab: {fileID: 7888033075714588, guid: 28f92d09cfa7eb24194165b41d38b214, type: 3}
 --- !u!95 &9149663317114025301
 Animator:
   serializedVersion: 5
