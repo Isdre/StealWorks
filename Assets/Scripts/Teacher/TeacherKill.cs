@@ -30,7 +30,7 @@ namespace Teacher {
 
         private void Shot(Vector3 d) {
             for(int i=0;i<bulletPerShot;i++) {
-                d += new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f) * 0.3f;
+                d += new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f) * ((float)_rand.NextDouble() * 0.5f - 0.25f);
                 TeacherBullet b = Instantiate(bullet,transform.position+d, Quaternion.identity).GetComponent<TeacherBullet>();
                 b.Direction = d.normalized;
             }

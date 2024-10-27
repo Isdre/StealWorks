@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
@@ -9,6 +10,11 @@ namespace Player
     {
         public float maxHealth = 100f;
         public float currentHealth = 100f;
+
+        private void Update()
+        {
+            if (currentHealth <= 0f) GameManager.Instance.RestartGame();
+        }
     }
 
 }
