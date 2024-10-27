@@ -39,8 +39,6 @@ namespace Shop{
 
         public void SetShop(bool active) {
             shop.SetActive(active);
-            if (active) Time.timeScale = 0f;
-            else Time.timeScale = 1f;
         }
 
         private void OnTriggerEnter2D(Collider2D col) {

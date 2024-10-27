@@ -3504,6 +3504,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4123645110252229578, guid: 94992d74bc8c1bf859d0d9424517cf90, type: 3}
   m_PrefabInstance: {fileID: 963813951}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &978220835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978220836}
+  - component: {fileID: 978220837}
+  m_Layer: 0
+  m_Name: GlovoLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978220836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978220835}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.041713, y: 19.527153, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &978220837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978220835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ccb134902277c4ab6e8e3a9e3f7cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipePanel: {fileID: 2060363089}
+  allRecipes:
+  - ingredients: "Bu\u0142ka sadasjfkasdfalfkjklsdaklrfklsdklflksjadfkl"
+    image: {fileID: 21300000, guid: 5205d2e0b4226774ea3d5f8a80f43d62, type: 3}
+  - ingredients: "ak to wszystko wygl\u0105da w praktyce i przy okazji nauczy\u0107
+      si\u0119 jak najwi\u0119cej. Przyznam, \u017Ce mam takie ma\u0142e mar"
+    image: {fileID: 21300000, guid: a34595ee106df7e449d0af9aacfb2d61, type: 3}
+  - ingredients: Zapew
+    image: {fileID: 21300000, guid: ecdfdd36170c5dd4296bc6ed4e3b65f4, type: 3}
+  - ingredients: "zacj\u0119 wydarze\u0144, to studiowa\u0142am zarz\u0105dzanie
+      na UJ i tam przez kilka miesi\u0119cy dzia\u0142a\u0142am w"
+    image: {fileID: 21300000, guid: a34595ee106df7e449d0af9aacfb2d61, type: 3}
+  - ingredients: " wysz\u0142o ca\u0142kiem nie\u017Ale, balans zosta\u0142 zachowany.
+      Tutaj wszystko robi\u0142am na w\u0142asny u\u017Cytek, nigdzie tego nie udost\u0119pnia\u0142am.
+      Staram si\u0119 te\u017C szlifowa\u0107 moje umiej\u0119tno\u015Bci pisarskie
+      (cho\u0107 na razie "
+    image: {fileID: 21300000, guid: 3f35e9492577b9f4093b4627f40d374a, type: 3}
+  - ingredients: 
+    image: {fileID: 21300000, guid: bd645c0de583b5144b0103d86a86db33, type: 3}
+  - ingredients: 
+    image: {fileID: 21300000, guid: 9b5339381a155fb498e334a3f5061450, type: 3}
+  - ingredients: 
+    image: {fileID: 21300000, guid: 3961c443cd2c80147a8d0b84bcadf569, type: 3}
+  - ingredients: 
+    image: {fileID: 21300000, guid: f33862945db3df844926e2081c51abf5, type: 3}
+  - ingredients: 
+    image: {fileID: 21300000, guid: ef95454bbf98561488404bda6b1c9c60, type: 3}
+  ordersContainer: {fileID: 1363266940}
+  timer: {fileID: 1204696861}
+  timeLimit: 300
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  warningColor: {r: 1, g: 0, b: 0, a: 1}
+  normalScale: {x: 1, y: 1, z: 1}
+  pulseScale: {x: 1.5, y: 1.5, z: 1.5}
+  numberOfOrders: 3
+  orderPrefab: {fileID: 7888033075714588, guid: 28f92d09cfa7eb24194165b41d38b214, type: 3}
 --- !u!1 &992059772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4272,6 +4352,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1204696861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4151673127110869276, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+  m_PrefabInstance: {fileID: 1211508842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1211508842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4280,6 +4371,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 415652793643918393, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9fe7b675785de694ca7f01cc5a13a3bc, type: 3}
     - target: {fileID: 1802229960824072596, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.041713
@@ -4320,6 +4415,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494980933932965749, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9126319812991210335, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_Name
       value: KitchenGame
@@ -4328,7 +4455,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9149663317114025301, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2825373929410794341, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
@@ -4841,6 +4969,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486360108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1363266940 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 659019063320632321, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+  m_PrefabInstance: {fileID: 1211508842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1368012241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5623663992035867647, guid: 3197a0e19b79800449a220ac1c1eea8c, type: 3}
@@ -7377,6 +7510,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5166840064909457739, guid: ad08ec64cb51fd03488122196fa23ea7, type: 3}
   m_PrefabInstance: {fileID: 713611927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2060363089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2587377857212917302, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+  m_PrefabInstance: {fileID: 1211508842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ab5e9ab29fe294b863127487cf0270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2097606332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6484216469771023812, guid: 128f961bb8b6a6c418066385cd397fbf, type: 3}
@@ -7961,6 +8105,7 @@ SceneRoots:
   - {fileID: 1250629627}
   - {fileID: 1088635092}
   - {fileID: 895952164}
+  - {fileID: 978220836}
   - {fileID: 1211508842}
   - {fileID: 486360108}
   - {fileID: 1546339081}
