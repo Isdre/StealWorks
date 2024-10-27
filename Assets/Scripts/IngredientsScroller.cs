@@ -29,10 +29,12 @@ public class IngredientScroller : MonoBehaviour
 
     void Start()
     {
+       
         inventory = FindObjectOfType<GameManager>();
-        UpdateIngredientDisplay();
         
-        // Listener do przycisków przewijania
+        ingredients = inventory.gameObject.GetComponent<ListOfItem>().itemsSprites;
+        // Listener do przycisków przewijani
+        UpdateIngredientDisplay();
         leftButton.onClick.AddListener(ScrollLeft);
         rightButton.onClick.AddListener(ScrollRight);
 
