@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 124512790}
   - component: {fileID: 124512789}
   - component: {fileID: 124512788}
+  - component: {fileID: 124512791}
   m_Layer: 0
   m_Name: MEATGRINDER
   m_TagString: MeatGrinder
@@ -338,7 +339,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -363,6 +364,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &124512791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124512787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3574b9bcbb00a40be2dffd5480f9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &228872064
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,11 +748,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1424633802400073886, guid: e53b01b21b84477428eb44e587a68d7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.27
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 1424633802400073886, guid: e53b01b21b84477428eb44e587a68d7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 1424633802400073886, guid: e53b01b21b84477428eb44e587a68d7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6864,7 +6877,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Origin: {x: 0, y: -19, z: 0}
   m_Size: {x: 92, y: 53, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -6984,24 +6997,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ccb134902277c4ab6e8e3a9e3f7cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: {fileID: 1931906755}
-  orders:
-  - {fileID: 11400000, guid: 8a8997fb6458e4f42a4beeac1c760b0b, type: 2}
-  - {fileID: 11400000, guid: 8c5818ba4418a70409d04f8319d77a3c, type: 2}
-  - {fileID: 11400000, guid: b6b477956105bae40984067410024c72, type: 2}
-  ordersImages:
-  - {fileID: 2090229317}
-  - {fileID: 1671115969}
-  - {fileID: 1172946500}
-  - {fileID: 1220079843}
-  - {fileID: 922041582}
-  - {fileID: 559998597}
+  recipePanel: {fileID: 0}
+  allRecipes: []
+  ordersContainer: {fileID: 0}
   timer: {fileID: 1105124485}
   timeLimit: 15
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   warningColor: {r: 1, g: 0, b: 0, a: 1}
   normalScale: {x: 1, y: 1, z: 1}
   pulseScale: {x: 1.5, y: 1.5, z: 1.5}
+  numberOfOrders: 3
 --- !u!212 &822585480
 SpriteRenderer:
   m_ObjectHideFlags: 0
