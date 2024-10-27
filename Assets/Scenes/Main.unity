@@ -1520,18 +1520,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7150719544482292167, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745283
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150719544482292167, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
-      propertyPath: m_Color.g
-      value: 0.6745283
-      objectReference: {fileID: 0}
-    - target: {fileID: 7150719544482292167, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8697787085777088771, guid: 7e751a705eeb5884887ba740425c081f, type: 3}
       propertyPath: m_Name
       value: Samara
