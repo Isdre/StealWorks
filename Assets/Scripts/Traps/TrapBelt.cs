@@ -38,6 +38,7 @@ public class TrapBelt : MonoBehaviour
 
     public void AddTrap(string n) {
         int target = trapDefs.FindIndex(x => x.Name == n);
+        if (target == -1) return;
         trapCount[target]++;
         slots[target].SetAmount(trapCount[target]);
     }

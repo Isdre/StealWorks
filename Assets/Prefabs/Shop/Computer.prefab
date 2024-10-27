@@ -1181,10 +1181,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 0304de651f468c042b915156c0ab1bde, type: 3}
     gold: 2
   - name: Ketchup
-    sprite: {fileID: 21300000, guid: 561fd83b5c5f21346bf8774a425d8723, type: 3}
+    sprite: {fileID: 21300000, guid: e71f10970508c904c9788a2f61060715, type: 3}
     gold: 1
   - name: Majonez
-    sprite: {fileID: 21300000, guid: e3b0aa5315c5596d98dd1035faff8edd, type: 3}
+    sprite: {fileID: 21300000, guid: 4966d8a94851bf89094e6a9e4e6af31f, type: 3}
     gold: 1
   - name: Papryka
     sprite: {fileID: 21300000, guid: 7dc02aeeb107aca3b864cd221c669f6d, type: 3}
