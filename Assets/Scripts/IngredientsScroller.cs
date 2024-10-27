@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class IngredientScroller : MonoBehaviour
 {
@@ -60,6 +61,8 @@ public class IngredientScroller : MonoBehaviour
             {
                 newIngredientButton.GetComponent<Button>().interactable = false;
             }
+
+            newIngredientButton.GetComponentInChildren<TMP_Text>().text = inventory.Inventory[i].count.ToString();
         }
     }
     private string GetIngredientName(int index)
