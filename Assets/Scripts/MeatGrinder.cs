@@ -8,7 +8,13 @@ public class MeatGrinder : MonoBehaviour
     public GrabingKid player;               // Obiekt Player
     public List<Sprite> itemSprites;        // Lista dostępnych itemów (jako Sprite)
     public GameObject itemPrefab;           // Prefab do wyświetlania sprite'ów
+    public GameManager inventory;
 
+    void Start()
+    {
+        inventory = FindObjectOfType<GameManager>();
+        itemSprites = inventory.gameObject.GetComponent<ListOfItem>().itemsSprites;
+    }
     public void Grind()
     {
         int childCount = player.childCount;
@@ -21,10 +27,16 @@ public class MeatGrinder : MonoBehaviour
          
             for (int j = 0; j < itemCount; j++)
             {
-                Sprite randomSprite = itemSprites[Random.Range(0, itemSprites.Count)];
+                int index = Random.Range(1, 9);
+                Sprite randomSprite = itemSprites[index];
                 Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(0, 2f);
                 Vector3 spawnPosition = player.transform.position + (Vector3)randomOffset;
 
+               
+                ItemCount help = inventory.Inventory[index];
+                help.count++;
+                inventory.Inventory[index] = help;
+            
                 // Rozpoczęcie korutyny do respienia i wygaszania obiektu
                 StartCoroutine(SpawnAndFadeItem(spawnPosition, randomSprite));
             }
