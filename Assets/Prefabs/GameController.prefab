@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1838028527489230721}
   - component: {fileID: 2292387073564525285}
+  - component: {fileID: 9002824200120510683}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -86,3 +87,36 @@ MonoBehaviour:
   - name: Jajko
     count: 0
   _gold: 3000
+--- !u!114 &9002824200120510683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7790639276077283840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4f70bea9a2a294799c3307b67baf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsSprites:
+  - {fileID: 21300000, guid: 63cf7db0d4373ad298e7b4f21b7ebed7, type: 3}
+  - {fileID: 21300000, guid: 4928a5e19342778b69b1ffd68f0ac077, type: 3}
+  - {fileID: 21300000, guid: add5c1d27ac4f984cada7fbf5de1068d, type: 3}
+  - {fileID: 21300000, guid: aa81b71c4d8f18a4b90a67fcee2b2647, type: 3}
+  - {fileID: 21300000, guid: ff456ab9c229779dbab6280af10e4b48, type: 3}
+  - {fileID: 21300000, guid: c14ae8018a515a72a83dcdd983f3945d, type: 3}
+  - {fileID: 21300000, guid: ffbd2f7a56b70c5449dccbb6f2d941a5, type: 3}
+  - {fileID: 21300000, guid: 6729969cd09a66ffe993bab85319f59a, type: 3}
+  - {fileID: 21300000, guid: 32ab210cdd434f782927871cf76914e5, type: 3}
+  - {fileID: 21300000, guid: a4c502c2206b4c6ed8401743f0de2f16, type: 3}
+  - {fileID: 21300000, guid: 1117ecef84e69fd6495d7fb6e0f21939, type: 3}
+  - {fileID: 21300000, guid: 335fc8caf25047ae5b0a6db1c8442a26, type: 3}
+  - {fileID: 21300000, guid: 561fd83b5c5f21346bf8774a425d8723, type: 3}
+  - {fileID: 21300000, guid: 6800c49adf53b53eba6f22d47ad54dd3, type: 3}
+  - {fileID: 21300000, guid: 6ee041012abd16e9297c466cd54c156e, type: 3}
+  - {fileID: 21300000, guid: e71f10970508c904c9788a2f61060715, type: 3}
+  - {fileID: 21300000, guid: 4966d8a94851bf89094e6a9e4e6af31f, type: 3}
+  - {fileID: 21300000, guid: 7dc02aeeb107aca3b864cd221c669f6d, type: 3}
+  - {fileID: 21300000, guid: e594159710b1078dc93d3991c781698e, type: 3}
+  - {fileID: 21300000, guid: 9655ae9655cb697b586e816bede27f1a, type: 3}
