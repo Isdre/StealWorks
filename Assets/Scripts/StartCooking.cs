@@ -11,6 +11,11 @@ public class StartCooking : MonoBehaviour
     private bool cooking;
     [SerializeField] private GameObject icon;
 
+    private void Start()
+    {
+        SetIcon(false);
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.F) && canCook) {
             canvas.SetActive(true);
