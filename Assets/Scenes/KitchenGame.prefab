@@ -1813,31 +1813,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipes:
-  - ingredients: "Bu\u0142ka sadasjfkasdfalfkjklsdaklrfklsdklflksjadfkl"
-    image: {fileID: 21300000, guid: 5205d2e0b4226774ea3d5f8a80f43d62, type: 3}
-  - ingredients: "ak to wszystko wygl\u0105da w praktyce i przy okazji nauczy\u0107
-      si\u0119 jak najwi\u0119cej. Przyznam, \u017Ce mam takie ma\u0142e mar"
-    image: {fileID: 21300000, guid: a34595ee106df7e449d0af9aacfb2d61, type: 3}
-  - ingredients: Zapew
-    image: {fileID: 21300000, guid: ecdfdd36170c5dd4296bc6ed4e3b65f4, type: 3}
+  - ingredients: Bulka,Kotlet,Bulka
+    image: {fileID: 21300000, guid: 66d59b943df38e94f96ad704ecd65cca, type: 3}
+  - ingredients: Bulka,Pomidor,Pomidor,Ketchup,Pomidor,Ketchup,Bulka
+    image: {fileID: 21300000, guid: 95301bec74ead2242a324835912f3f3c, type: 3}
+  - ingredients: Bulka,Salata,Cebula,Kotlet,Ketchup,Pomidor,Bulka
+    image: {fileID: 21300000, guid: 316701cdbf8bff84ba08329175fd70f4, type: 3}
   - ingredients: "zacj\u0119 wydarze\u0144, to studiowa\u0142am zarz\u0105dzanie
       na UJ i tam przez kilka miesi\u0119cy dzia\u0142a\u0142am w"
-    image: {fileID: 21300000, guid: a34595ee106df7e449d0af9aacfb2d61, type: 3}
-  - ingredients: " wysz\u0142o ca\u0142kiem nie\u017Ale, balans zosta\u0142 zachowany.
-      Tutaj wszystko robi\u0142am na w\u0142asny u\u017Cytek, nigdzie tego nie udost\u0119pnia\u0142am.
-      Staram si\u0119 te\u017C szlifowa\u0107 moje umiej\u0119tno\u015Bci pisarskie
-      (cho\u0107 na razie "
-    image: {fileID: 21300000, guid: 3f35e9492577b9f4093b4627f40d374a, type: 3}
-  - ingredients: 
-    image: {fileID: 21300000, guid: bd645c0de583b5144b0103d86a86db33, type: 3}
-  - ingredients: 
-    image: {fileID: 21300000, guid: 9b5339381a155fb498e334a3f5061450, type: 3}
-  - ingredients: 
-    image: {fileID: 21300000, guid: 3961c443cd2c80147a8d0b84bcadf569, type: 3}
-  - ingredients: 
-    image: {fileID: 21300000, guid: f33862945db3df844926e2081c51abf5, type: 3}
-  - ingredients: 
-    image: {fileID: 21300000, guid: ef95454bbf98561488404bda6b1c9c60, type: 3}
+    image: {fileID: 21300000, guid: 8681265cd433f9243931e429bc3efedf, type: 3}
+  - ingredients: Bulka,Pomidor,Jajko,Ketchup,Chorizo,Ketchup,Bulka
+    image: {fileID: 21300000, guid: 6b56f0f30802a92419129d8b09228c77, type: 3}
+  - ingredients: Bulka,Salata,Cebula,Kotlet,Ketchup,Pomidor,Bulka
+    image: {fileID: 21300000, guid: c5b856447cd0fc64594be05b98bb8041, type: 3}
+  - ingredients: Bulka,Cebula,Ketchup
+    image: {fileID: 21300000, guid: 9fadcbd02d0be27458eb81843ba43fe3, type: 3}
+  - ingredients: Bulka,Pomidor,Cheddar,Ketchup,Bulka
+    image: {fileID: 21300000, guid: 6f42089e3c5b50047b572d6aeedd8384, type: 3}
+  - ingredients: Bulka,Salata,Cebula,Kotlet,Cheddar,Ketchup,Pomidor,Bulka
+    image: {fileID: 21300000, guid: 1c5247bd311649940a084b97dee1f7ae, type: 3}
+  - ingredients: Bulka,Pomidor,Pomidor,Ketchup,Pomidor,Ketchup,Majonezowy,Bulk
+    image: {fileID: 21300000, guid: 497752956814c784bb886204d2a26f44, type: 3}
   ingredientsText: {fileID: 728771185757696048}
   recipeImage: {fileID: 1344423848152777491}
   leftButton: {fileID: 5596475965520220009}
