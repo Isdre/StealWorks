@@ -119,7 +119,7 @@ MonoBehaviour:
   bullet: {fileID: 2151810423120913442, guid: 6c6ee25e023a2666c906f4ad85fafdbb, type: 3}
   shotDistance: 5
   bulletPerShot: 5
-  reloadTime: 3
+  reloadTime: 4
 --- !u!58 &3829184577324750814
 CircleCollider2D:
   m_ObjectHideFlags: 0
