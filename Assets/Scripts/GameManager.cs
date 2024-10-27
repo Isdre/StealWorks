@@ -43,24 +43,27 @@ public class GameManager : MonoBehaviour {
     }
 
     public void AddItem(string item) {
-        ItemCount i = Inventory.Where(x => x.name == item).FirstOrDefault();
-        Debug.Log(i.name);
-        Debug.Log(i.count);
-        if (i.name != null) {
-            Inventory.RemoveAll(x => x.name == item);
-            i.count++;    
+        var existingItem = Inventory.FirstOrDefault(x => x.name == item);
+
+        if (existingItem.name == item) {
+            // Item found, so increase the count
+            int index = Inventory.IndexOf(existingItem);
+            existingItem.count++;
+            Inventory[index] = existingItem;
         }
-        else i = new ItemCount(item,1);
-        Inventory.Add(i);
         TrapBelt.Instance.AddTrap(item);
     }
 
     public void RemoveItem(string item)
     {
-        ItemCount i = Inventory.Where(x => x.name == item).FirstOrDefault();
-        int index = Inventory.IndexOf(i);
-        i.count--;
-        Inventory[index] = i;
+        var existingItem = Inventory.FirstOrDefault(x => x.name == item);
+
+        if (existingItem.name == item) {
+            
+            int index = Inventory.IndexOf(existingItem);
+            existingItem.count--;
+            Inventory[index] = existingItem;
+        }
     }
 
     public void RestartGame() {
