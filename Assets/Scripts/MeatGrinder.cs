@@ -9,7 +9,7 @@ public class MeatGrinder : MonoBehaviour
     public List<Sprite> itemSprites;        // Lista dostępnych itemów (jako Sprite)
     public GameObject itemPrefab;           // Prefab do wyświetlania sprite'ów
     public GameManager inventory;
-
+    public GameObject output;
     void Start()
     {
         inventory = FindObjectOfType<GameManager>();
@@ -30,7 +30,7 @@ public class MeatGrinder : MonoBehaviour
                 int index = Random.Range(1, 9);
                 Sprite randomSprite = itemSprites[index];
                 Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(0, 2f);
-                Vector3 spawnPosition = player.transform.position + (Vector3)randomOffset;
+                Vector3 spawnPosition = output.transform.position + (Vector3)randomOffset;
 
                
                 ItemCount help = inventory.Inventory[index];
