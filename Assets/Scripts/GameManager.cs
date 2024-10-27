@@ -56,10 +56,14 @@ public class GameManager : MonoBehaviour {
 
     public void RemoveItem(string item)
     {
-        ItemCount i = Inventory.Where(x => x.name == item).FirstOrDefault();
-        int index = Inventory.IndexOf(i);
-        i.count--;
-        Inventory[index] = i;
+        var existingItem = Inventory.FirstOrDefault(x => x.name == item);
+
+        if (existingItem.name == item) {
+            
+            int index = Inventory.IndexOf(existingItem);
+            existingItem.count--;
+            Inventory[index] = existingItem;
+        }
     }
 
     public void RestartGame() {
