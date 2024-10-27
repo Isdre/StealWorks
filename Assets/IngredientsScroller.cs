@@ -83,6 +83,9 @@ public class IngredientScroller : MonoBehaviour
             case 14: return "Cebula";
             case 15: return "Ketchup";
             case 16: return "Majonezowy";
+            case 17: return "Papryka";
+            case 18: return "Chilli";
+            case 19: return "Jajko";
             default: return "Unknown";
         }
     }
@@ -94,7 +97,7 @@ public class IngredientScroller : MonoBehaviour
 
        
         burgerBuilder.AddIngredient(index,ingredientName);
- //inventory.RemoveItem(ingredientName);
+        inventory.RemoveItem(ingredientName);
     }
 
     public void ScrollLeft()
