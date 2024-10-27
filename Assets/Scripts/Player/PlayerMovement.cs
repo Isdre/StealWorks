@@ -15,9 +15,11 @@ namespace Player {
 
         private Transform _transform;
         public bool isRunning = false;
+        private Animator _animator;
 
         private void Start()
         {
+            _animator = GetComponent<Animator>();
             _transform = transform;
         }
 
@@ -25,6 +27,8 @@ namespace Player {
         {
             Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
 
+            _animator.SetFloat("Front", Input.GetAxis("Vertical") * -1f);
+            
             // Sprawdzamy czy gracz trzyma spację i czy ma wystarczająco dużo staminy na bieg
             if (Input.GetKey(KeyCode.Space) && stamina > 0f)
             {

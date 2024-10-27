@@ -31,13 +31,17 @@ namespace Teacher {
                 if (run) _direction = (_player.position - _transform.position);
                 timerD -= Time.deltaTime;
                 if (timerD < 0f) {
-                    _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+                    _direction = getRandomD();
                     timerD = timeD;
                 }
                 _rigid.velocity = speed * Time.deltaTime * _direction.normalized;
             } 
         }
 
+        private Vector3 getRandomD() {
+            return new Vector3((float)_rand.NextDouble() - 0.5f,(float)_rand.NextDouble() - 0.5f,0f);
+        }
+        
         public void UnlockMove() {canMove = true;}
         public void LockMove() {
             Debug.Log("LockMove");
@@ -54,7 +58,7 @@ namespace Teacher {
         private void OnTriggerExit2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) {
                 run = false;
-                _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+                _direction = getRandomD();
             }
         }
     }
