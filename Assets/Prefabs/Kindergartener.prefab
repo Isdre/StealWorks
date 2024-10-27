@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cdf0d71f0587047a908f4654e79180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
+  speed: 700
   canMove: 1
   run: 0
 --- !u!114 &3814952379411270083
@@ -198,7 +198,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657727014908373620}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -216,4 +216,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

@@ -57,7 +57,7 @@ namespace Player {
         {
             if (canGrab)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0)  && collectedKids.Count < maxKids)
+                if (Input.GetKeyDown(KeyCode.F)  && collectedKids.Count < maxKids)
                 {
                     // Dodaj obiekt do listy
                     collectedKids.Add(currentChild);

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherTv: {fileID: 0}
+  canTep: 1
 --- !u!70 &7667192222086667668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +132,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.71}
-  m_Size: {x: 1.33, y: 1.61}
+  m_Offset: {x: 0, y: -1.12}
+  m_Size: {x: 1.87, y: 2.51}
   m_Direction: 0

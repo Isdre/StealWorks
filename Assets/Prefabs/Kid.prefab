@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1510724513084674524}
   - component: {fileID: -1615410138446841844}
   - component: {fileID: 8232087641400066674}
+  - component: {fileID: 2877019719719870291}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Kid
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3ee55ff7e38a3c5adeebd352c7a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 800
   canMove: 1
   run: 0
   runToTarget: 0
@@ -182,7 +183,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294158880696332861}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -201,3 +202,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2877019719719870291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294158880696332861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3232031dedd010e45b13b76a8f8a6269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 5635aa224ab81a74290a131b26d2bda0, type: 3}
