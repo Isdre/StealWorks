@@ -90,7 +90,7 @@ namespace Player {
 
             if (canRealeseChild)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     ReleaseKids();
                     grinder.Grind();

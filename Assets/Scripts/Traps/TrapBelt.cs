@@ -17,7 +17,7 @@ public class TrapBelt : MonoBehaviour
 {
     public static TrapBelt Instance = null;
     public List<TrapPref> trapDefs = new();
-    public List<int> trapCount;
+    public List<int> trapCount = new();
     public List<TrapSlot> slots = new();
     [SerializeField] private GameObject trapSlot;
 
@@ -25,12 +25,14 @@ public class TrapBelt : MonoBehaviour
         if (Instance == null) Instance = this;
         if (Instance != this) Destroy(this.gameObject);
 
+        int i = 0;
+        
         foreach(TrapPref trapPref in trapDefs) {
             TrapSlot ts = Instantiate(trapSlot,transform).GetComponent<TrapSlot>();
             slots.Add(ts);
             ts.SetSprite(trapPref.icon);
-            ts.SetAmount(0);
-            trapCount.Add(0);
+            ts.SetAmount(trapCount[i]);
+            i++;
         }
     }
 
