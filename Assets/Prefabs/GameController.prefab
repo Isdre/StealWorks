@@ -86,7 +86,13 @@ MonoBehaviour:
     count: 0
   - name: Jajko
     count: 0
-  _gold: 3000
+  - name: Gulasz
+    count: 2
+  - name: Zabawka
+    count: 1
+  - name: Czynsz
+    count: 0
+  _gold: 100
 --- !u!114 &9002824200120510683
 MonoBehaviour:
   m_ObjectHideFlags: 0

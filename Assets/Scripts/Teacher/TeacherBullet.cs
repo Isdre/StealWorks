@@ -23,7 +23,8 @@ namespace Teacher {
             if (timer < 0f) Destroy(this.gameObject);
         }
 
-        private void OnCollisionEnter2D(Collision2D col) {
+        private void OnTriggerEnter2D(Collider2D col) {
+            if (col.isTrigger) return;
             if (col.gameObject.CompareTag("Player")) {
                 col.gameObject.GetComponent<Stats>().currentHealth -= Damage;
                 Destroy(this.gameObject);
