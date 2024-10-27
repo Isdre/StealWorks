@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7790639276077283840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838028527489230721}
+  - component: {fileID: 2292387073564525285}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1838028527489230721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7790639276077283840}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2292387073564525285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7790639276077283840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405ee8d15c34786d0a9e3873d0839073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory:
+  - name: Bulka
+    count: 0
+  - name: Kotlet
+    count: 0
+  - name: Bekon
+    count: 0
+  - name: Szarpane
+    count: 0
+  - name: Grill
+    count: 0
+  - name: Salami
+    count: 0
+  - name: Chorizo
+    count: 0
+  - name: Kielbasa
+    count: 0
+  - name: Pastrami
+    count: 0
+  - name: Plastry
+    count: 0
+  - name: Cheddar
+    count: 0
+  - name: Salata
+    count: 0
+  - name: Pomidor
+    count: 0
+  - name: Ogorek
+    count: 0
+  - name: Cebula
+    count: 0
+  - name: Ketchup
+    count: 0
+  - name: Majonezowy
+    count: 0
+  - name: Papryka
+    count: 0
+  - name: Chilli
+    count: 0
+  - name: Jajko
+    count: 0
+  _gold: 3000

@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class BurgerBuilder : MonoBehaviour
 {
-    public List<Sprite> ingredientSprites;  // Lista sprite'ów składników do przypisania w Inspectorze
-    public GameObject burgerContainer;      // Referencja do kontenera składników na Canvasie
-    public GameObject ingredientPrefab;     // Prefab UI `Image` składnika
+    public List<Sprite> ingredientSprites; 
+    public GameObject burgerContainer;      
+    public GameObject ingredientPrefab;    
+    
     public IngredientScroller ingredientScroller;
     
     public List<GameObject> currentIngredients = new List<GameObject>();
     public List<String> currentBurger = new List<String>();
+    
     private float offsetY = 15f;  // Odległość w pionie między składnikami
     
     
