@@ -10,15 +10,19 @@ public class MeatGrinder : MonoBehaviour
     public GameObject itemPrefab;           // Prefab do wyświetlania sprite'ów
     public GameManager inventory;
     public GameObject output;
+
+    private Animator _animator;
     void Start()
     {
+        _animator = GetComponent<Animator>();
         inventory = FindObjectOfType<GameManager>();
         itemSprites = inventory.gameObject.GetComponent<ListOfItem>().itemsSprites;
     }
     public void Grind()
     {
         int childCount = player.childCount;
-
+        _animator.SetBool("Grinder",false);
+        _animator.SetBool("Grinder",true);
         for (int i = 0; i < childCount; i++)
         {
             
