@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Traps;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct ItemCount {
@@ -57,11 +58,15 @@ public class GameManager : MonoBehaviour {
     public void RemoveItem(string item)
     {
         ItemCount i = Inventory.Where(x => x.name == item).FirstOrDefault();
-        Inventory.RemoveAll(x => x.name == item);
+        int index = Inventory.IndexOf(i);
         i.count--;
-        Inventory.Add(i);
+        Inventory[index] = i;
     }
 
+    public void RestartGame() {
+        SceneManager.LoadScene(1);
+    }
+    
     //<3
     public bool NegateBool(bool variable) {
         return !variable;
