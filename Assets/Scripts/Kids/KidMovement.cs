@@ -70,12 +70,14 @@ namespace Kids {
         }
 
         private void OnTriggerEnter2D(Collider2D col) {
+            if (col.isTrigger) return;
             if (col.gameObject.CompareTag("Player")) {
                 run = true;
             }
         }
 
         private void OnTriggerExit2D(Collider2D col) {
+            if (col.isTrigger) return;
             if (col.gameObject.CompareTag("Player")) {
                 run = false;
                 _direction = getRandomD();
