@@ -17,6 +17,7 @@ namespace Teacher {
         private Vector3 _direction;
         private float timeD = 3f;
         private float timerD;
+        private SpriteRenderer _spriteRenderer;
 
         private void Start() {
             timerD = timeD;
@@ -24,6 +25,7 @@ namespace Teacher {
             _transform = transform;
             _rigid = GetComponent<Rigidbody2D>();
             _rand = new System.Random();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Update() {
@@ -35,7 +37,10 @@ namespace Teacher {
                     timerD = timeD;
                 }
                 _rigid.velocity = speed * Time.deltaTime * _direction.normalized;
-            } 
+            }
+
+            if (_direction.x > 0) _spriteRenderer.flipX = true;
+            else _spriteRenderer.flipX = false;
         }
 
         private Vector3 getRandomD() {

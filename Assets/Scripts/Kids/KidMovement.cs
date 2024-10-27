@@ -19,8 +19,11 @@ namespace Kids {
         private Vector3 _direction;
         private float timeD = 3f;
         private float timerD;
+        private SpriteRenderer _spriteRenderer;
 
-        private void Start() {
+        private void Start()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
             timerD = timeD;
             _player = GameObject.FindWithTag("Player").transform;
             _transform = transform;
