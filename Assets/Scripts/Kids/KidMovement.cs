@@ -45,8 +45,9 @@ namespace Kids {
                 }
 
                 timerD -= Time.deltaTime;
-                if (timerD < 0f) {
-                    _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+                if (timerD < 0f)
+                {
+                    _direction = getRandomD();
                     timerD = timeD;
                 }
 
@@ -54,6 +55,10 @@ namespace Kids {
             }
         }
 
+        private Vector3 getRandomD() {
+            return new Vector3((float)_rand.NextDouble() - 0.5f,(float)_rand.NextDouble() - 0.5f,0f);
+        }
+        
         public void RunToTarget(Vector3 target) {
             _target = target;
             runToTarget = true;
@@ -61,7 +66,7 @@ namespace Kids {
 
         public void StopRunToTarget() {
             runToTarget = false;
-            _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+            _direction = getRandomD();
         }
 
         private void OnTriggerEnter2D(Collider2D col) {
@@ -73,7 +78,7 @@ namespace Kids {
         private void OnTriggerExit2D(Collider2D col) {
             if (col.gameObject.CompareTag("Player")) {
                 run = false;
-                _direction = new Vector3((float)_rand.NextDouble(),(float)_rand.NextDouble(),0f);
+                _direction = getRandomD();
             }
         }
     }
