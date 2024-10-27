@@ -878,6 +878,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 709615652}
     m_Modifications:
+    - target: {fileID: 729205768288037472, guid: 7c1c00d46022b3e32a8454ef8324d161, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5411629840550153623, guid: 7c1c00d46022b3e32a8454ef8324d161, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -945,6 +949,10 @@ PrefabInstance:
     - target: {fileID: 6820851138833393208, guid: 7c1c00d46022b3e32a8454ef8324d161, type: 3}
       propertyPath: m_Name
       value: Computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182059482498855967, guid: 7c1c00d46022b3e32a8454ef8324d161, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4396,8 +4404,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1091134517731857583, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091134517731857583, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1802229960824072596, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4440,16 +4452,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3481008303964639452, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481008303964639452, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776553508517923859, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4776553508517923859, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512246574212520057, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6512246574212520057, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7335637421351421262, guid: 78d5be279e3b1f947bd49675093dae95, type: 3}
       propertyPath: m_IsActive
