@@ -17,7 +17,8 @@ namespace Player {
         public bool canGrab = false;
         public GameObject currentChild;
         public bool canRealeseChild = false;
-
+        public int childCount = 0;
+        public MeatGrinder grinder;
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("MeatGrinder"))
@@ -87,6 +88,8 @@ namespace Player {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     ReleaseKids();
+                    grinder.Grind();
+                    
                 }
             }
         }
@@ -96,7 +99,8 @@ namespace Player {
             // Czyszczenie ikonek z UI
             uiImageSlot1.sprite = null;
             uiImageSlot2.sprite = null;
-
+            
+            childCount=collectedKids.Count;
             // Opróżnia listę dzieci
             collectedKids.Clear();
         
