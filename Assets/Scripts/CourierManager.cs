@@ -23,7 +23,7 @@ public class CourierManager : MonoBehaviour
     
     public int numberOfOrders = 3;
     
-    
+    public Image orderPrefab; 
     
     private int currentOrderIndex = 0;
     private List<RecipePanel.Recipe> orders;      
@@ -71,12 +71,11 @@ public class CourierManager : MonoBehaviour
         ordersImages.Clear();
        
         // Dodaj nowe obrazki składników dla aktualnego przepisu
-        foreach (var ingredient in  orders)
+        foreach (var ingredient in orders)
         {
-            Image newImage = new GameObject("OrderImage", typeof(Image)).GetComponent<Image>();
-            newImage.sprite = ingredient.image; // ustaw sprite dla składnika
-            newImage.transform.SetParent(ordersContainer, false); // przypnij do kontenera z layoutem
-            ordersImages.Add(newImage);
+            Image newOrderImage = Instantiate(orderPrefab, ordersContainer);
+            newOrderImage.sprite = ingredient.image; // ustawienie sprite'a składnika
+            ordersImages.Add(newOrderImage);
         }
     }
 

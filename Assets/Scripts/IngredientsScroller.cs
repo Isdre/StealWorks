@@ -8,13 +8,21 @@ using System.Collections.Generic;
 
 public class IngredientScroller : MonoBehaviour
 {
-    public List<Sprite> ingredients; // Lista sprite'ów składników
+    
+    public List<Sprite> ingredients; 
+    private GameManager inventory;
+    
+    
     public GameObject ingredientPrefab; // Prefab składnika jako Button
     public Transform container; // Kontener (Panel) na składniki
+    
+    
     public Button leftButton;
+    
     public Button rightButton;
     public BurgerBuilder burgerBuilder;
-    private GameManager inventory; 
+     
+    
     private int startIndex = 0;
     private int visibleCount = 6; // Liczba widocznych składników
 
@@ -33,7 +41,7 @@ public class IngredientScroller : MonoBehaviour
 
     private void UpdateIngredientDisplay()
     {
-        // Czyszczenie zawartości kontenera
+        
         foreach (Transform child in container) 
             Destroy(child.gameObject);
         
@@ -45,9 +53,13 @@ public class IngredientScroller : MonoBehaviour
             Image ingredientImage = newIngredientButton.GetComponent<Image>();
             ingredientImage.sprite = ingredients[i];
 
-            // Dodanie zdarzenia kliknięcia
-            int ingredientIndex = i; // Przechowywanie aktualnego indeksu dla delegacji
+            
+            int ingredientIndex = i;
             newIngredientButton.GetComponent<Button>().onClick.AddListener(() => OnIngredientClick(ingredientIndex));
+            if (inventory.Inventory[i].count == 0)
+            {
+                newIngredientButton.GetComponent<Button>().interactable = false;
+            }
         }
     }
     private string GetIngredientName(int index)
@@ -71,6 +83,9 @@ public class IngredientScroller : MonoBehaviour
             case 14: return "Cebula";
             case 15: return "Ketchup";
             case 16: return "Majonezowy";
+            case 17: return "Papryka";
+            case 18: return "Chilli";
+            case 19: return "Jajko";
             default: return "Unknown";
         }
     }
@@ -82,7 +97,7 @@ public class IngredientScroller : MonoBehaviour
 
        
         burgerBuilder.AddIngredient(index,ingredientName);
- //inventory.RemoveItem(ingredientName);
+        inventory.RemoveItem(ingredientName);
     }
 
     public void ScrollLeft()
