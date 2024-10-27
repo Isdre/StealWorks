@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 860, y: 502.11002}
+  m_AnchoredPosition: {x: 839, y: 454}
   m_SizeDelta: {x: 200, y: 58.2324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181855564
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -10.290161, z: 0, w: 0}
+  m_margin: {x: 0, y: -10.290161, z: 3.444336, w: -24.109741}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -564,6 +564,7 @@ MonoBehaviour:
   normalScale: {x: 1, y: 1, z: 1}
   pulseScale: {x: 1.5, y: 1.5, z: 1.5}
   numberOfOrders: 3
+  orderPrefab: {fileID: 7888033075714588, guid: 28f92d09cfa7eb24194165b41d38b214, type: 3}
 --- !u!212 &312508526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2288,7 +2289,7 @@ MonoBehaviour:
     m_Right: 100
     m_Top: 10
     m_Bottom: 10
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2962,7 +2963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
