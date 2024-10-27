@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsDef:
-  - name: "Bu\u0142ka"
+  - name: Bulka
     sprite: {fileID: 21300000, guid: 63cf7db0d4373ad298e7b4f21b7ebed7, type: 3}
     gold: 3
   - name: Cheddar
@@ -1174,7 +1174,7 @@ MonoBehaviour:
   - name: Pomidor
     sprite: {fileID: 21300000, guid: 561fd83b5c5f21346bf8774a425d8723, type: 3}
     gold: 2
-  - name: "Og\xF3rek"
+  - name: Ogorek
     sprite: {fileID: 21300000, guid: 6800c49adf53b53eba6f22d47ad54dd3, type: 3}
     gold: 2
   - name: Cebula
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   - name: Papryka
     sprite: {fileID: 21300000, guid: 7dc02aeeb107aca3b864cd221c669f6d, type: 3}
     gold: 2
-  - name: Majonez
+  - name: Majonezowy
     sprite: {fileID: 21300000, guid: fa2c88dbbcf6fdcbda4fd69285a947b3, type: 3}
     gold: 1
   - name: Jajko
