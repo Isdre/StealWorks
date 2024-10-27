@@ -14,6 +14,7 @@ public class MeatGrinder : MonoBehaviour
     private Animator _animator;
     void Start()
     {
+        inventory = GameManager.Instance;
         _animator = GetComponent<Animator>();
         inventory = FindObjectOfType<GameManager>();
         itemSprites = inventory.gameObject.GetComponent<ListOfItem>().itemsSprites;

@@ -614,6 +614,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4123645110252229578, guid: 94992d74bc8c1bf859d0d9424517cf90, type: 3}
   m_PrefabInstance: {fileID: 140389319}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &149492090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2292387073564525285, guid: 48c33d082cdef6540b05412bf1962ec3, type: 3}
+  m_PrefabInstance: {fileID: 1258341244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405ee8d15c34786d0a9e3873d0839073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &190756639
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,14 +798,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2802138898642455989, guid: 0049d34a74b23a9e7bab341b83f670b0, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 850c8cd3c1bf33240a9dec5729c17a2d, type: 2}
-    - target: {fileID: 2802138898642455989, guid: 0049d34a74b23a9e7bab341b83f670b0, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 1458631293653005761, guid: 850c8cd3c1bf33240a9dec5729c17a2d, type: 2}
     - target: {fileID: 2802138898642455989, guid: 0049d34a74b23a9e7bab341b83f670b0, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -5188,7 +5191,7 @@ PrefabInstance:
     - target: {fileID: 2386656964451434037, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f226a395a16e537438a620ed564df2d4, type: 3}
+      objectReference: {fileID: 21300000, guid: 0acc7dc1359560b498a54eaecdad8358, type: 3}
     - target: {fileID: 2386656964451434037, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5208,14 +5211,6 @@ PrefabInstance:
     - target: {fileID: 2386656964451434037, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_SortingOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119204242142854664, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.6017885
-      objectReference: {fileID: 0}
-    - target: {fileID: 3119204242142854664, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.843194
       objectReference: {fileID: 0}
     - target: {fileID: 3119204242142854664, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5258,16 +5253,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5829020417626555269, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829020417626555269, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829020417626555269, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5829020417626555269, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.81
+      value: 2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 5829020417626555269, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.42
+      value: 1.3125
       objectReference: {fileID: 0}
     - target: {fileID: 6495094367192195060, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
       propertyPath: m_Name
@@ -5277,6 +5280,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1899101289}
+    - target: {fileID: 7798377547877522411, guid: de41fbe4170936345b7d26174d4fc99e, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 149492090}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
