@@ -20,29 +20,35 @@ namespace Player {
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.CompareTag("MeatGrinder"))
+            {
+                canRealeseChild = true;
+               
+            }
+            
+            if (other.isTrigger) return;
             if (other.CompareTag("Kid"))
             {
                 canGrab = true;
                 currentChild = other.gameObject;
             }
-            if (other.CompareTag("MeatGrinder"))
-            {
-               canRealeseChild = true;
-               
-            }
+            
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (other.CompareTag("MeatGrinder"))
+            {
+                canRealeseChild = false;
+            }
+            
+            if (other.isTrigger) return;
             if (other.CompareTag("Kid"))
             {
                 canGrab = false;
                 currentChild = null;
             }
-            if (other.CompareTag("MeatGrinder"))
-            {
-              canRealeseChild = false;
-            }
+            
         
         }
 
