@@ -20,9 +20,13 @@ namespace Player {
         public bool canRealeseChild = false;
         public int childCount = 0;
         public MeatGrinder grinder;
+        private Animator _animator;
         
-        
-        
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("MeatGrinder"))
@@ -71,9 +75,11 @@ namespace Player {
                         if (collectedKids.Count == 1)
                         {
                             uiImageSlot1.sprite = kidScript.icon;
+                            _animator.SetBool("LeftKid",true);
                         }
                         else if (collectedKids.Count == 2)
                         {
+                            _animator.SetBool("RightKid",true);
                             uiImageSlot2.sprite = kidScript.icon;
                         }
                         
@@ -98,6 +104,8 @@ namespace Player {
             // Czyszczenie ikonek z UI
             uiImageSlot1.sprite = null;
             uiImageSlot2.sprite = null;
+            _animator.SetBool("RightKid",false);
+            _animator.SetBool("LeftKid",false);
             
             childCount=collectedKids.Count;
             // Opróżnia listę dzieci
