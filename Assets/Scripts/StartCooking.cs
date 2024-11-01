@@ -11,21 +11,24 @@ public class StartCooking : MonoBehaviour
     private bool cooking;
     [SerializeField] private GameObject icon;
 
+    private void Start()
+    {
+        SetIcon(false);
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.F) && canCook) {
             canvas.SetActive(true);
-            Time.timeScale = 0f;
             cooking = true;
-        } else if (cooking && Input.GetKeyDown(KeyCode.Escape)) {
+        } else if (cooking && Input.GetKeyDown(KeyCode.Escape))
+        {
             canvas.SetActive(false);
-            Time.timeScale = 1f;
             cooking = false;
         }
     }
 
     public void StopCooking() {
         canvas.SetActive(false);
-        Time.timeScale = 1f;
         cooking = false;
     }
     

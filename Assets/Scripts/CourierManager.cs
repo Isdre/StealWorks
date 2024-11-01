@@ -30,15 +30,13 @@ public class CourierManager : MonoBehaviour
     private List<Image> ordersImages;  
     private int helper = 0;
     
-    void Start()
-    {
+    private void Start() {
         allRecipes = recipePanel.recipes;
         orders = new List<RecipePanel.Recipe>();  // Inicjalizacja listy zamówień
         ordersImages = new List<Image>();         // Inicjalizacja listy obrazków
         RandomizeOrders();    
         // Rozpocznij proces
         StartCoroutine(SpawnCourier());
-        
     }
     private void RandomizeOrders()
     {
@@ -62,7 +60,6 @@ public class CourierManager : MonoBehaviour
 
     private void ShowOrder()
     {
-       
         // Usuń stare obrazki składników
         foreach (Image img in ordersImages)
         {

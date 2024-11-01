@@ -40,6 +40,7 @@ public class IngredientScroller : MonoBehaviour
 
         // Ustawienie aktywności przycisków
         UpdateButtonState();
+        burgerBuilder.SetIngredients();
     }
 
     private void UpdateIngredientDisplay()
@@ -102,7 +103,12 @@ public class IngredientScroller : MonoBehaviour
 
        
         burgerBuilder.AddIngredient(index,ingredientName);
-        inventory.RemoveItem(ingredientName);
+        if (inventory.Inventory[index].count > 0)
+        {
+            inventory.RemoveItem(ingredientName);
+        }
+        UpdateIngredientDisplay();
+        
     }
 
     public void ScrollLeft()
