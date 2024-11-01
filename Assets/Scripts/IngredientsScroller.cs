@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class IngredientScroller : MonoBehaviour
 {
     
     public List<Sprite> ingredients; 
-    private GameManager inventory;
+    private GameManager inventory = null;
     
     
     public GameObject ingredientPrefab; // Prefab składnika jako Button
@@ -41,6 +42,12 @@ public class IngredientScroller : MonoBehaviour
         // Ustawienie aktywności przycisków
         UpdateButtonState();
         burgerBuilder.SetIngredients();
+    }
+
+    private void OnEnable()
+    {
+        if (inventory == null) return;
+        UpdateIngredientDisplay();
     }
 
     private void UpdateIngredientDisplay()
