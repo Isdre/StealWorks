@@ -16,7 +16,7 @@ namespace Player {
         private Transform _transform;
         public bool isRunning = false;
         private Animator _animator;
-
+        
         private void Start()
         {
             _animator = GetComponent<Animator>();
@@ -30,15 +30,12 @@ namespace Player {
             _animator.SetFloat("Front", Input.GetAxis("Vertical") * -1f);
             
             // Sprawdzamy czy gracz trzyma spację i czy ma wystarczająco dużo staminy na bieg
-            if (Input.GetKey(KeyCode.Space) && stamina > 0f)
-            {
+            if (Input.GetKey(KeyCode.Space) && stamina > 0f) {
                 isRunning = true;
                 stamina -= staminaDrainRate * Time.deltaTime; // Zużycie staminy
             }
-            else if (Input.GetKeyUp(KeyCode.Space))
-            {
+            else {
                isRunning = false;
-
             }
 
             if (isRunning==false)
