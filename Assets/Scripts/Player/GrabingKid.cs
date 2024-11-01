@@ -88,7 +88,7 @@ namespace Player {
                 }
             }
 
-            if (canRealeseChild)
+            if (canRealeseChild && collectedKids.Count>0)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {

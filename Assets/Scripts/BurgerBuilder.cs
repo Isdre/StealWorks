@@ -25,11 +25,16 @@ public class BurgerBuilder : MonoBehaviour
     {
         acceptButton.onClick.AddListener(SellBurger);
         throwButton.onClick.AddListener(ThrowBurger);
-        ingredientSprites = ingredientScroller.ingredients;
+        
         if (burgerContainer == null)
         {
             Debug.LogError("Brak przypisanego kontenera na składniki burgera!");
         }
+    }
+
+    public void SetIngredients()
+    {
+        ingredientSprites = ingredientScroller.ingredients;
     }
 
     public void AddIngredient(int ingredientIndex, string name)

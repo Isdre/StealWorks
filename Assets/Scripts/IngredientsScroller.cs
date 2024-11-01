@@ -40,6 +40,7 @@ public class IngredientScroller : MonoBehaviour
 
         // Ustawienie aktywności przycisków
         UpdateButtonState();
+        burgerBuilder.SetIngredients();
     }
 
     private void UpdateIngredientDisplay()

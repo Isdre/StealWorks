@@ -22,8 +22,7 @@ public class MeatGrinder : MonoBehaviour
     public void Grind()
     {
         int childCount = player.childCount;
-        _animator.SetBool("Grinder",false);
-        _animator.SetBool("Grinder",true);
+        _animator.SetTrigger("Grind");
         for (int i = 0; i < childCount; i++)
         {
             
